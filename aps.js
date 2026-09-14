@@ -76,3 +76,12 @@ export async function getFolderContents(authenticationProvider, hubId, projectId
             modifiedBy: item.attributes.lastModifiedUserName
         }));
 }
+
+export async function getItemTip(authenticationProvider, projectId, itemId) {
+    const client = new DataManagementClient({ authenticationProvider });
+    const { data } = await client.getItemTip(projectId, itemId);
+    return {
+        name: data.attributes.displayName,
+        derivativeUrn: data.relationships.derivatives.data.id
+    };
+}
