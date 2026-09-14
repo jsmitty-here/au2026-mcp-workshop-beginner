@@ -13,7 +13,7 @@ export function createMcpServer(authenticationProvider) {
         'list-hubs-projects',
         {
             title: 'List hubs and projects',
-            description: 'Lists all hubs and their projects available to the APS application.',
+            description: 'Lists all hubs and their projects available to the authenticated user.',
             annotations: { readOnlyHint: true }
         },
         async () => {
