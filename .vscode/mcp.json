@@ -3,7 +3,8 @@
     "APS MCP Server": {
       "type": "stdio",
       "command": "node",
-      "args": ["index.js"]
+      "args": ["index.js"],
+      "envFile": "${workspaceFolder}/.env"
     }
   }
 }
